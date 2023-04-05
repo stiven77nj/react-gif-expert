@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
@@ -32,6 +33,11 @@ export const GifGrid = ({ categoria }) => {
             </div>
         </>
     )
+}
+
+// PropTypes
+GifGrid.propTypes = {
+    categoria: PropTypes.string.isRequired
 }
 
 // Cada vez que react detecta un cambio vuelve a redibujar el componente.

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddCategory = ({ nuevaCategoria }) => {
 
@@ -38,6 +39,7 @@ export const AddCategory = ({ nuevaCategoria }) => {
 
             <form
                 onSubmit={ posteoFormulario }
+                aria-label='form'
             >
                 <input
                     type="text"
@@ -49,4 +51,9 @@ export const AddCategory = ({ nuevaCategoria }) => {
 
         </>
     )
+}
+
+// PropTypes
+AddCategory.propTypes = {
+    nuevaCategoria: PropTypes.func.isRequired
 }
